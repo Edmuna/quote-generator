@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 350px;
+  margin-top: 150px;
+}
+
+.main {
+  border: 2px dotted black;
+  border-radius: 40px;
+  width: 600px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: lightgray;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.header {
+  padding: 20px;
+  margin: 20px;
+  text-align: left;
+}
+
+.content {
+  padding: 20px;
+  margin: 20px;
+}
+
+.quote-area {
+  padding: 20px;
+  margin: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  height: 100px;
+  width: 400px;
+  /* overflow: auto; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 400px;
+}
+
+.quote-text {
+  text-align: center;
+  max-height: 400px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.author-div {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  margin: 5px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.copy-btn,
+.speech-btn {
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  border: black;
+}
+
+.copy-btn,
+.speech-btn:hover {
+  cursor: pointer;
+}
+
+.new-quote {
+  background: blue;
+  height: 30px;
+  width: 75px;
+  border-radius: 10px;
+  border: solid blue;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.new-quote:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+.publish-btn {
+  border-radius: 10px;
+  height: 30px;
+  width: 60px;
+  font-family: "Roboto", sans-serif;
+  color: black;
+  font-weight: bold;
+  font-size: 14px;
+  border: white;
+  position: relative;
+}
+
+.publish-btn::after {
+  content: "Currently not functioning";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.publish-btn:hover {
+  cursor: pointer;
+}
+
+.publish-btn:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
